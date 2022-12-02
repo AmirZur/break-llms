@@ -120,7 +120,7 @@ def get_break_reps(row, break_ids, layer=1):
 
 
 def mean_pooling(hidden_states):
-    _check_pooling_dimensionality(hidden_states)
+    #_check_pooling_dimensionality(hidden_states)
     return torch.mean(hidden_states, axis=1)
 
 
@@ -192,6 +192,7 @@ def _tsne_viz_util(df, colors=None, output_filename=None, figsize=(40, 50), rand
     # Plotting:
     fig, ax = plt.subplots(nrows=1, ncols=1, figsize=figsize)
     ax.plot(xvals, yvals, marker='', linestyle='')
+
     # Text labels:
     for word, x, y, color in zip(vocab, xvals, yvals, colors):
         try:
